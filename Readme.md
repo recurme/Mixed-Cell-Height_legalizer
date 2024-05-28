@@ -58,10 +58,9 @@ cd Mixed-Cell-Height_legalizer
 
 To use MCHLG, follow these steps:
 1. Navigate to the project directory:
-···bash
-cd Mixed-Cell-Height-Legalizer
+```bash
 tar -xzvf ./benchmarks/benchmarks.tar.gz
-···
+```
 2. Run the provided script for 2017 benchmarks version:
 ```bash
 ./run.sh
