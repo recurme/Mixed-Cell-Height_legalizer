@@ -309,8 +309,7 @@ void Naller::init_adjust() {
             int quo = (int)(sp->cur_y_temp_  / (defaultH * 2)); //VDD
             sp->cur_y_ = std::min( defaultH + quo * defaultH * 2, g_max_y - sp->height_ - (g_max_y /defaultH + 1) % 2 * defaultH);
         }
-        // Use for Counting
-        sp->aligendRow_y_ = sp->cur_y_;
+        
 
         double cost_temp = 0.0;  
         calTempCost(cost_temp, sp->cur_x_, sp->cur_y_, sp->width_, sp->height_, sp->signal_pins_, sp->regionId_);

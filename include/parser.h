@@ -176,7 +176,6 @@ public:
     bool isBottomVss_;
     bool isFixed_; 
     double init_x_, init_y_;    
-    int aligendRow_y_;    
     double cur_x_temp_;
     double cur_y_temp_;
     Rect<int> extendedWin_;
@@ -186,7 +185,7 @@ public:
     
     Cell ()  { name_ = ""; cellorient_ = ""; id_ = 0; type_ = 0; regionId_ = -1; cur_x_ = 0; cur_y_ = 0; 
         cur_x0_ = 0; cur_y0_ = 0; lEdgeT_ = 0; rEdgeT_ = 0; of_ = 0; ripup_cnt_ = 0; width_ = 0; height_ = 0;
-        aligendRow_ = 2; isBottomVss_ = true; isFixed_ = false; init_x_ = 0.0; init_y_ = 0.0; aligendRow_y_=0; cur_x_temp_ = 0.0; 
+        aligendRow_ = 2; isBottomVss_ = true; isFixed_ = false; init_x_ = 0.0; init_y_ = 0.0;  cur_x_temp_ = 0.0; 
         cur_y_temp_ = 0.0;  setWinSize(0, 0, 0, 0); }
     inline void setWinSize(int xLL, int yLL, int xUR, int yUR) {
         extendedWin_.set(xLL, yLL, xUR, yUR);
