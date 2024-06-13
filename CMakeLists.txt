@@ -28,6 +28,9 @@ set(LEFLIB_HOME
   ${PROJECT_SOURCE_DIR}/module/lef/5.8-p027
 )
 
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+find_package(GD REQUIRED)
+
 add_subdirectory(${DEFLIB_HOME})
 add_subdirectory(${LEFLIB_HOME})
 
@@ -68,22 +71,23 @@ include_directories (
 
   include
   utils
+  ${GD_INCLUDE_DIR}
 )
 
 ############################################################
-# Libraries setting 
+# Libraries setting
 ############################################################
 
 add_library( MCHLGlib STATIC
   ${MCHLG_SRC}
 )
 
-set_target_properties( MCHLGlib 
-  PROPERTIES OUTPUT_NAME "MCHLGlib"  
+set_target_properties( MCHLGlib
+  PROPERTIES OUTPUT_NAME "MCHLGlib"
 )
 
 ############################################################
-# Executable setting 
+# Executable setting
 ############################################################
 
 add_executable( MCHLG
@@ -100,7 +104,7 @@ target_link_libraries( MCHLG
   lefzlib
   clef
   clefzlib
-  gd
+  ${GD_LIBRARIES}
 )
 
 
